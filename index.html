@@ -1,0 +1,618 @@
+<html>
+    <head>
+        <title>Taxi Schwechat Preprava</title>
+        <link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet">
+        <style>
+
+            body{
+                margin:0px;
+                font-family: 'Space Mono', monospace;
+            }
+
+            .top-name-background{
+                width:100%;
+                padding-top:100px;
+                padding-bottom:100px;
+                text-align:center;
+                background: repeating-linear-gradient(45deg, #131313, #131313 60px, #f1ff2f 60px, #f1ff2f 65px);                /* background-image:repeating-linear-gradient(to bottom right, black, rgb(241, 255, 47) 5%, black 5%); */
+            }
+
+            .top-name-center{
+                font-size:50px;
+                color:#f1ff2f;
+                text-shadow: -1px -1px black;
+                padding:20px;
+                background-color: black;
+                width:50%;
+                margin:auto;
+                box-shadow:25px 25px #f1ff2f;
+            }
+
+            .vitajte-background{
+                width:100%;
+                padding-top:40px;
+                padding-bottom:40px;
+                background-color:white;
+            }
+
+            .vitajte-name-background{
+                width:40%;
+                padding:20px;
+                background-color:#f1ff2f;
+                margin-left:25px;
+                font-size:30px;
+                border-bottom: black 3px solid;
+            }
+
+            .vitajte-inner-background{
+                width:90%;
+                padding-top:40px;
+                padding-bottom:20px;
+                margin:auto;
+            }
+
+            .vitajte-inner-text{
+                width:90%;
+                padding:4%;
+                background-color:black;
+                color:white;
+            }
+
+            .sluzby-background{
+                width:100%;
+                background-color:black;
+                color:white;
+                padding-top:40px;
+                padding-bottom:40px;
+            }
+
+            .sluzby-name-background{
+                width:40%;
+                padding:20px;
+                background-color:#f1ff2f;
+                margin-left:25px;
+                font-size:30px;
+                color:black;
+                border-bottom: white 5px solid;
+            }
+
+            .sluzby-tabulka-background{
+                color:black;
+                width:80%;
+                margin:auto;
+                margin-top:40px;
+                text-align:left;
+            }
+
+            .sluzby-tabulka-background-tr{
+                background-color:white;
+            }
+
+            th{
+                padding:10px;
+
+            }
+            
+
+            .sluzby-tabulka-background-tr:nth-child(even) {
+                background-color:#fffda4;
+            }
+
+            .cennik-background{
+                width:100%;
+                padding-top:40px;
+                padding-bottom:40px;
+            }
+
+            .cennik-name-background{
+                width:40%;
+                padding:20px;
+                background-color:#f1ff2f;
+                margin-left:25px;
+                font-size:30px;
+                border-bottom: black 3px solid;
+            }
+
+            .cennik-inner-background{
+                width:100%;
+                padding-top:40px;
+                padding-bottom:40px;
+                overflow: hidden;
+            }
+
+            .cennik-inner-background-20{
+                width:25%;
+                float:left;
+                margin:auto;
+                text-align:center;
+                font-size: 22.5px;
+            }
+
+            .cennik-inner-background-80{
+                width:75%;
+                float:left;
+            }
+
+            .cennik-inner-background-80-typy-background{
+                background-color: rgb(230, 230, 230);
+                width:90%;
+                padding-top:40px;
+                padding-bottom:40px;
+                margin:auto;
+                overflow:hidden;
+                text-align: center;
+            }
+
+            .cennik-inner-background-80-typy-background-half{
+                width:50%;
+                float: left;
+                text-align:center;
+            }
+
+            .cennik-inner-background-80-typy-background-img{
+                width:30%;
+                text-align:center;
+                transition:all ease 1s;
+            }
+
+            .cennik-inner-background-80-typy-background-img:hover{
+                background-color:lightgray;
+                transition: all ease 1s;
+                border-radius:10%;
+            }
+
+            .cennik-select{
+                width:90%;
+                text-align:center;
+                font-family: 'Space Mono', monospace;
+                font-size:20px;
+                background-color: rgb(255, 255, 255);
+                padding:5px;
+            }
+
+            .cennik-inner-background-35{
+                width:35%;
+                float:right;
+                text-align:center;
+                font-size: 22.5px;
+            }
+
+            .cennik-inner-background-35-square{
+                width:175px;
+                height:120px;
+                padding-top:55px;
+                font-size:35px;
+                background-color:#f1ff2f;
+                box-shadow:25px 25px black;
+            }
+
+            .cennik-tabulka-background{
+                color:black;
+                width:90%;
+                margin:auto;
+                text-align:left;
+            }
+
+            .cennik-tabulka-background-tr{
+                background-color:black;
+                color:white;
+            }
+
+            .cennik-tabulka-background-tr:nth-child(even) {
+                background-color:#fffda4;
+                color:black;
+            }
+
+            .cennik-tabulka-th-name{
+                width:90%;
+            }
+
+            .cennik-tabulka-price{
+                width:10%;
+                text-align:center;
+            }
+            
+            .objednavka-background{
+                width:100%;
+                padding-top:40px;
+                padding-bottom:40px;
+                background-color:#fffda4;
+            }
+
+            .objednavka-inner{
+                width:70%;
+                padding-top:40px;
+                padding-bottom:40px;
+                background-color:white;
+                margin:auto;
+                overflow: hidden;
+            }
+
+            .objednavka-inner-text{
+                text-align:center;
+                padding-top:20px;
+            }
+
+            .objednavka-name{
+                font-size:30px;
+                text-align:center;
+            }
+
+            .objednavka-inner-90{
+                width:50%;
+                padding-top:30px;
+                margin:auto;
+            }
+
+            .objednavka-inner-input{
+                width:100%;
+                font-size:15px;
+                padding:5px;
+            }
+
+            .objednavka-inner-input-sub-name{
+                width:100%;
+                font-size: 20px;
+                padding-top:20px;
+                padding-left:40px;
+            }
+
+            .objednavka-inner-button{
+                padding:5px;
+                background-color:#f1ff2f;
+                text-align:center;
+                transition: all 0.75s ease;
+                margin:auto;
+            }
+
+            .objednavka-inner-button:hover{
+                color:#f1ff2f;
+                transition: all 0.75s ease;
+                background-color: black;
+            }
+
+            .kontakt-background{
+                width:100%;
+                background-color:white;
+                padding-top:40px;
+                padding-bottom:40px;
+                overflow: hidden;
+            }
+
+            .kontakt-name-background{
+                width:40%;
+                padding:20px;
+                background-color:#f1ff2f;
+                margin-left:25px;
+                font-size:30px;
+                border-bottom: black 3px solid;
+            }
+
+            .kontakt-map{
+                padding-top:40px;
+                padding-bottom:40px;
+                text-align:center;
+            }
+
+            .kontakt-inner-background{
+                width:80%;
+                padding:40px;
+                background-color:#f1ff2f;
+                margin-bottom:40px;
+                margin:auto;
+            }
+
+            .kontakt-inner-name{
+                padding-bottom:20px;
+                font-size: 25px;
+            }
+
+            .kontakt-inner-50{
+                float:left;
+                padding-top:40px;
+                padding-bottom:40px;
+                width:50%;
+            }
+
+        </style>
+    </head>
+
+
+<body>
+
+<!-- The Top Name -->
+
+<div class="top-name-background">
+    <div class="top-name-center">
+        Taxi<br>
+        Schwechat<br>
+        preprava<br>
+    </div>
+</div>
+
+<!-- Vitajte -->
+
+<div class="vitajte-background">
+    <div class="vitajte-name-background">Vitajte</div>
+
+    <div class="vitajte-inner-background">
+        <div class="vitajte-inner-text">
+            Naša prepravná spoločnosť Vám ponúka kvalitné služby v oblasti prepravy osôb s využitím vozidiel značky MERCEDES-BENZ, ktoré sú zárukou najvyššieho komfortu a bezpečia, ale aj luxusnými limuzínami a mikrobusmi.
+
+            Špecializujeme sa predovšetkým na prepravu osôb na viedenské letisko Schwechat Vienna Airport, na všetky medzinárodné letiská okolitých štátov a podľa Vašich požiadaviek aj po celom území Slovenskej republiky. 
+            
+            Na prepravu využívame len diaľničné spojenie, ktoré je rýchlejšie, pohodlnejšie a bezpečnejšie.
+                        
+            Transfery sú zabezpečené profesionálnymi vodičmi s bohatými skúsenosťami a dlhoročnou praxou, ktorí sú Vám k dispozícií 24 hodín denne. Ponúkame vysokú úroveň poskytovaných služieb, čistotu vozidiel, včasné pristavenie vozidla na dohodnuté miesto, slušné a ochotné vystupovanie vodičov.
+            
+            Služby si môžete objednať e-mailom, telefonicky, alebo vyplnením on-line objednávky.
+            V našich vozidlách je možnosť platby platobnými a kreditnými kartami na platobný terminál. Možnosť platby v hotovosti, ale aj na faktúru.
+            
+            Dúfame, že svojim profesionálnym prístupom a primeranými cenami si získame Vaše sympatie, priazeň a náklonnosť.
+        </div>
+    </div>
+</div>
+
+<!-- Sluzby -->
+
+<div class="sluzby-background">
+    <div class="sluzby-name-background">Sluzby</div>
+
+<table class="sluzby-tabulka-background">
+    <tr class="sluzby-tabulka-background-tr">
+        <th>Preprava osôb po celom území Slovenskej republiky a do celej Európy</th>
+    </tr>
+    <tr class="sluzby-tabulka-background-tr">
+        <th>Transfery na všetky medzinárodné letiská okolitých štátov</th>
+    </tr>
+    <tr class="sluzby-tabulka-background-tr">
+        <th>Hotelové transfery, spolupráca pre hotely a recepcie</th>
+    </tr>
+    <tr class="sluzby-tabulka-background-tr">
+        <th>Reprezentatívna preprava na obchodné stretnutia a firemné akcie</th>
+    </tr>
+    <tr class="sluzby-tabulka-background-tr">
+        <th>Odvozy na svadby, plesy, promócie a iné spoločenské podujatia</th>
+    </tr>
+    <tr class="sluzby-tabulka-background-tr">
+        <th>Spolupráca pre cestovné kancelárie</th>
+    </tr>
+    <tr class="sluzby-tabulka-background-tr">
+        <th>Malokarpatská vínna cesta</th>
+    </tr>
+    <tr class="sluzby-tabulka-background-tr">
+        <th>Zabezpečujeme prepravu na husacinu</th>
+    </tr>
+    <tr class="sluzby-tabulka-background-tr">
+        <th>Iné typy prepravy podľa individuálnych požiadaviek zákazníka</th>
+    </tr>
+    <tr class="sluzby-tabulka-background-tr">
+        <th>Pre spoločnosti ponúkame platbu na faktúru</th>
+    </tr>
+    <tr class="sluzby-tabulka-background-tr">
+        <th>Prenájom vozidla s vodičom</th>
+    </tr>
+</table>
+</div>
+
+<!-- Cennik -->
+
+<div class="cennik-background">
+    <div class="cennik-name-background">Cennik</div>
+
+    <div class="cennik-inner-background">
+        <div class="cennik-inner-background-20">Vozidlo:</div>
+        <div class="cennik-inner-background-80">
+            <div class="cennik-inner-background-80-typy-background">
+                <div class="cennik-inner-background-80-typy-background-half">
+                    <img src="/car.png" class="cennik-inner-background-80-typy-background-img">
+                    <br>Limuzína Mercedes E class
+                </div>
+                <div class="cennik-inner-background-80-typy-background-half">
+                    <img src="/limousine.png" class="cennik-inner-background-80-typy-background-img">
+                    <br>Mikrobus Mercedes Viano
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cennik-inner-background">
+        <div class="cennik-inner-background-20">Destinacia:</div>
+        <div class="cennik-inner-background-80">
+            <div class="cennik-inner-background-80-typy-background">
+                <select class="cennik-select" id="select">
+                    <option id="0">-</option>
+                    <option id="1">Bratislava - Schwechat Airport</option>
+                    <option id="2">Bratislava - Wien ( centrum )</option>
+                    <option id="3">Bratislava - Brno</option>
+                    <option id="4">Bratislava - Praha</option>
+                    <option id="5">Bratislava - Budapešť</option>
+                    <option id="6">Bratislava - Bratislava</option>
+                    <option id="7">Bratislava - Stupava</option>
+                    <option id="8">Bratislava - Borinka</option>
+                    <option id="9">Bratislava - Ivanka pri Dunaji</option>
+                    <option id="10">Bratislava - Senec</option>
+                    <option id="11">Bratislava - Pezinok</option>
+                    <option id="12">Bratislava - Chorvátsky Grob</option>
+                    <option id="13">Bratislava - Modra</option>
+                    <option id="14">Bratislava - Malacky</option>
+                    <option id="15">Bratislava - Dunajská Streda</option>
+                    <option id="16">Bratislava - Trnava</option>
+                    <option id="17">Bratislava - Piešťany</option>
+                    <option id="18">Bratislava - Nitra</option>
+                    <option id="19">Bratislava - Komárno</option>
+                    <option id="20">Bratislava - Nové Zámky</option>
+                    <option id="21">Bratislava - Trenčín</option>
+                    <option id="22">Bratislava - Žilina</option>
+                    <option id="23">Bratislava - Banská Bystrica</option>
+                    <option id="24">Bratislava - Martin</option>
+                    <option id="25">Bratislava - Rožňava</option>
+                    <option id="26">Bratislava - Poprad</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="cennik-inner-background">
+        <div class="cennik-inner-background-35">
+            <div class="cennik-inner-background-35-square">10$</div>
+        </div>
+        <div class="cennik-inner-background-35">Cena:</div>
+    </div>
+
+    <div class="cennik-inner-background">
+        <div class="cennik-inner-background-20">*Priplatky:</div>
+        <div class="cennik-inner-background-80">
+            <table class="cennik-tabulka-background">
+                <tr class="cennik-tabulka-background-tr">
+                    <th class="cennik-tabulka-name">r</th>
+                    <th class="cennik-tabulka-price">10$</th>
+                </tr>
+                <tr class="cennik-tabulka-background-tr">
+                    <th class="cennik-tabulka-name">r</th>
+                    <th class="cennik-tabulka-price">10$</th>
+                </tr>
+                <tr class="cennik-tabulka-background-tr">
+                    <th class="cennik-tabulka-name">r</th>
+                    <th class="cennik-tabulka-price">10$</th>
+                </tr>
+                <tr class="cennik-tabulka-background-tr">
+                    <th class="cennik-tabulka-name">r</th>
+                    <th class="cennik-tabulka-price">10$</th>
+                </tr>
+                <tr class="cennik-tabulka-background-tr">
+                    <th class="cennik-tabulka-name">r</th>
+                    <th class="cennik-tabulka-price">10$</th>
+                </tr>
+                <tr class="cennik-tabulka-background-tr">
+                    <th class="cennik-tabulka-name">r</th>
+                    <th class="cennik-tabulka-price">10$</th>
+                </tr>
+                <tr class="cennik-tabulka-background-tr">
+                    <th class="cennik-tabulka-name">r</th>
+                    <th class="cennik-tabulka-price">10$</th>
+                </tr>
+                <tr class="cennik-tabulka-background-tr">
+                    <th class="cennik-tabulka-name">r</th>
+                    <th class="cennik-tabulka-price">10$</th>
+                </tr>
+                <tr class="cennik-tabulka-background-tr">
+                    <th class="cennik-tabulka-name">r</th>
+                    <th class="cennik-tabulka-price">10$</th>
+                </tr>
+                
+            </table>
+        </div>
+    </div>
+
+</div>
+
+<!-- Objednavka -->
+
+<div class="objednavka-background">
+    <div class="objednavka-inner">
+        <div class="objednavka-name">Online Objednavka</div>
+
+        <div class="objednavka-inner-text">Informacie oznacene * su nepotrebne vyplnit</div>
+
+        <div class="objednavka-inner-90">
+            <input class="objednavka-inner-input" type="text" id="meno" placeholder="Meno a Priezvisko">
+        </div>
+
+        <div class="objednavka-inner-90">
+            <input class="objednavka-inner-input" type="text" id="tel." placeholder="Tel. cislo">        
+        </div>
+
+        <div class="objednavka-inner-90">
+            <input class="objednavka-inner-input" type="text" id="firma" placeholder="*Firma">
+        </div>
+
+        <div class="objednavka-inner-90">
+            <input class="objednavka-inner-input" type="text" id="odkial" placeholder="Kde pristavit vozidlo (adresa odkial)">
+        </div>
+    
+        <div class="objednavka-inner-90">
+            <input class="objednavka-inner-input" type="text" id="kam" placeholder="Ciel transferu (adresa kam)">
+        </div>
+        
+        <div class="objednavka-inner-90">
+            <input class="objednavka-inner-input" type="text" id="pocet" placeholder="Pocet osob">
+        </div>
+    
+        <div class="objednavka-inner-90">
+            <input class="objednavka-inner-input" type="text" id="datum" placeholder="Datum pristavenia vozidla">
+        </div>
+
+        <div class="objednavka-inner-90">
+            <input class="objednavka-inner-input" type="text" id="cas" placeholder="Cas pristavenia vozidla">
+        </div>
+    
+        <div class="objednavka-inner-90">
+            <input class="objednavka-inner-input" type="text" id="let" placeholder="Cislo letu (prilet z)">
+        </div>
+        
+        <div class="objednavka-inner-90">
+            <input class="objednavka-inner-input" type="text" id="batozina" placeholder="*Mnozstvo batoziny (pocet ks)">
+        </div>   
+        
+        <div class="objednavka-inner-90">
+            <input class="objednavka-inner-input" type="text" id="poznamka" placeholder="*Poznamka">
+        </div>    
+
+        <div class="objednavka-inner-input-sub-name">* Spiatocna cesta</div>
+
+        <div class="objednavka-inner-90">
+            <input class="objednavka-inner-input" type="text" id="s-datum" placeholder="*Cas pristavenia vozidla">
+        </div>
+    
+        <div class="objednavka-inner-90">
+            <input class="objednavka-inner-input" type="text" id="s-cas" placeholder="*Cislo letu (prilet z)">
+        </div>
+        
+        <div class="objednavka-inner-90">
+            <input class="objednavka-inner-input" type="text" id="s-adresa-odkial" placeholder="*Adresa odkial">
+        </div>   
+        
+        <div class="objednavka-inner-90">
+            <input class="objednavka-inner-input" type="text" id="s-let" placeholder="*Cislo letu (prilet z...)">
+        </div>    
+
+        <div class="objednavka-inner-90">
+            <div class="objednavka-inner-button">Odoslat</div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Kontakt -->
+
+<div class="kontakt-background">
+    <div class="kontakt-name-background">Kontakt</div>
+        <div class="kontakt-inner-50">
+            <div class="kontakt-inner-background">
+                <div class="kontakt-inner-name">Adresa</div>
+                    Ing. Ľubomír Kocian<br>
+                    Jégého 14<br>
+                    821 08 Bratislava<br>
+                    IČO: 41162331<br>
+                    DIČ: 1073638841
+            </div>
+        </div>
+
+        <div class="kontakt-inner-50">
+                <div class="kontakt-inner-background" style="background-color:black;color:white;">
+                    <div class="kontakt-inner-name">Mobil + Email</div>
+                    +421 915 70 80 24<br><br><br>
+                    info@taxi-schwechat-preprava.sk<br>
+                    info@taxischwechatpreprava.sk
+                </div>
+        </div>
+
+    <div class="kontakt-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2661.583113127127!2d17.132424250668695!3d48.15684185769688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476c8934bf22ae1b%3A0xbb47b8f142bc11fc!2zSsOpZ8OpaG8gMTQsIDgyMSAwOCBSdcW-aW5vdg!5e0!3m2!1ssk!2ssk!4v1573663227769!5m2!1ssk!2ssk" width="50%" height="450" frameborder="0" style="border:5px solid black" allowfullscreen=""></iframe>
+    </div>
+</div>
+
+</body>
+
+</html>
